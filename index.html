@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Asifa</title>
@@ -208,7 +210,7 @@
         <button class="btn" onclick="nextScreen(2)">Blow the candles 🕯️💨</button>
     </div>
 
-    <!-- SCREEN 2: Gift Screen (With dynamic delay texts) -->
+    <!-- SCREEN 2: Gift Screen -->
     <div class="screen" id="screen2">
         <h1>I have something for you... 💝</h1>
         <div class="gift-img">🎁</div>
@@ -219,9 +221,9 @@
     <!-- SCREEN 3: Photo / Smile Celebration Screen -->
     <div class="screen" id="screen3">
         <div class="photo-grid">
-            <!-- Replace 'photo1.jpg' and 'photo2.jpg' with actual image URLs of Asifa -->
-            <div class="photo-holder"><img src="photo1.jpg" alt="Asifa 1"></div>
-            <div class="photo-holder"><img src="photo2.jpg" alt="Asifa 2"></div>
+            <!-- Automatically matching the uploaded photo filenames -->
+            <div class="photo-holder"><img src="IMG_20260627_231820_350.jpg" alt="Asifa 1"></div>
+            <div class="photo-holder"><img src="IMG_20260627_231824_781.jpg" alt="Asifa 2"></div>
         </div>
         <p class="photo-caption">Aaj ka din sirf birthday nahi, tumhari smile ka celebration hai 🎂❤️</p>
         <button class="btn" onclick="nextScreen(4)">Next 💕</button>
@@ -262,7 +264,6 @@
     </a>
 
     <script>
-        // Gift clicks mechanism to replicate image flow delays
         let giftClickCount = 0;
         function handleGiftClick() {
             giftClickCount++;
@@ -281,16 +282,12 @@
             }
         }
 
-        // Screen switching core logic
         function nextScreen(screenNum) {
-            // Hide all screens
             document.querySelectorAll('.screen').forEach(screen => {
                 screen.classList.remove('active');
             });
-            // Show requested screen
             document.getElementById('screen' + screenNum).classList.add('active');
         }
     </script>
 </body>
-  </html>
-  
+</html>
